@@ -214,7 +214,7 @@ Figures are saved to `outputs/figures/`.
 
 ---
 
-## Repository Structure¨
+## Repository Structure
 PreyLangCambodia/
 raw_data/                    - WDPA boundary shapefile
 scripts/
