@@ -11,8 +11,6 @@ This project builds and executes a full end-to-end forest health monitoring pipe
 
 The project is built to demonstrate geospatial workflows directly relevant to forest restoration monitoring and carbon certification contexts. Prey Lang is subject to documented illegal logging pressure, making it a meaningful test case for the kind of pixel-level forest health monitoring used in nature-based carbon project verification.
 
-This project is part of a portfolio of geospatial scripting work. Prior projects covering SAR-based flood extent mapping and Baltic Sea algal bloom analysis using rasterio, GeoPandas and the CDSE API are available at [github.com/samw0907](https://github.com/samw0907).
-
 ---
 
 ## Study Area
