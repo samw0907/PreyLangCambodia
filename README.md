@@ -150,8 +150,6 @@ This analysis focuses on forest disturbance detection and vegetation health moni
 
 The following scripts can be opened and run directly in the GEE Code Editor without any local setup. A Google Earth Engine account is required.
 
-GEE Project: [preylangcambodia](https://code.earthengine.google.com/?project=preylangcambodia)
-
 | Script | Description | Link |
 |--------|-------------|------|
 | 01_orientation_test | Connectivity test, Sentinel-2 access confirmation | [Open](https://code.earthengine.google.com/4b89f5f6f011084b7c8779c9982515a7) |
