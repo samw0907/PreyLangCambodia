@@ -6,7 +6,7 @@
 
 This project builds and executes a full end-to-end forest health monitoring pipeline over Prey Lang Wildlife Sanctuary in central Cambodia, using multi-temporal Sentinel-2 imagery processed via Google Earth Engine (GEE). The analysis covers three dry season composites spanning 2022, 2024 and 2026, detecting forest disturbance and partial recovery patterns across one of Southeast Asia's largest remaining lowland evergreen forest blocks.
 
-The project is built to demonstrate geospatial workflows directly relevant to forest restoration monitoring and carbon certification contexts. Prey Lang is subject to documented illegal logging pressure, making it a meaningful test case for the kind of pixel-level forest health monitoring used in nature-based carbon project verification.
+The project demonstrates multi-index spectral analysis and change detection workflows applied to a tropical forest monitoring context. Prey Lang is subject to documented illegal logging pressure, making it a relevant and challenging study area for forest disturbance detection and vegetation health assessment over time.
 
 ---
 
@@ -95,7 +95,7 @@ All five indices show a consistent pattern of disturbance concentrated in the 20
 | EVI | 0.431 | 0.416 | 0.432 |
 | NDMI | 0.207 | 0.178 | 0.203 |
 
-NDRE is notable for its minimal recovery between 2024 and 2026 (0.459 to 0.460), suggesting that canopy chlorophyll content has not recovered even in areas where structural regrowth is underway. This is consistent with secondary forest dynamics where woody regrowth precedes recovery of mature canopy chemistry.
+NDRE is notable for its minimal recovery between 2024 and 2026 (0.459 to 0.460), suggesting that canopy chlorophyll content has not recovered even in areas where structural regrowth is underway. This is consistent with secondary forest dynamics, where structural regrowth typically precedes recovery of canopy biochemistry.
 
 ### Disturbance Extent
 
