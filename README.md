@@ -1,3 +1,4 @@
+# Prey Lang Wildlife Sanctuary - Forest Health & Disturbance Monitoring
 ## Multi-Index Sentinel-2 Analysis via Google Earth Engine | Cambodia | 2022-2026
 
 ---
@@ -14,7 +15,7 @@ The project demonstrates multi-index spectral analysis and change detection work
 
 **Prey Lang Wildlife Sanctuary**, Cambodia (WDPA ID: 555703480)
 
-Prey Lang is the largest lowland evergreen forest in mainland Southeast Asia outside the Mekong floodplain, covering approximately 4,900 km² across four provinces in central Cambodia. The sanctuary has been subject to significant and well-documented illegal logging pressure over the past decade, making it a relevant and challenging study area for forest disturbance monitoring.
+One of the most ecologically significant lowland evergreen forests in mainland Southeast Asia, covering approximately 4,900 km² across four provinces in central Cambodia. The sanctuary has been subject to significant and well-documented illegal logging pressure over the past decade, making it a relevant and challenging study area for forest disturbance monitoring.
 
 The study area boundary was sourced from the World Database on Protected Areas (WDPA) via [protectedplanet.net](https://www.protectedplanet.net) and imported as a GEE asset.
 
@@ -71,6 +72,8 @@ The dNBR 2022-2026 layer was classified into four disturbance severity classes:
 | Moderate Loss | 0.1 to 0.3 | Detectable forest degradation or partial clearing |
 | High Loss | > 0.3 | Severe disturbance, likely clearing or fire |
 
+The classification thresholds are adapted from Key and Benson (2006) - Landscape Assessment: Ground measure of severity, the Composite Burn Index, and remote sensing of severity - and adjusted for tropical forest context following published guidance on NBR-based disturbance detection in Southeast Asian forest systems.
+
 ### Two-Phase Workflow
 
 The analysis was conducted in two phases to demonstrate both interactive GEE exploration and reproducible scripted pipeline development:
@@ -113,6 +116,16 @@ Disturbance is spatially concentrated at the northern edge and southern portion 
 
 ---
 
+## Limitations
+
+Zonal statistics are computed across the full WDPA boundary polygon, which includes minor areas of water, settlement edges and agricultural land in addition to closed canopy forest. The index means therefore represent conditions across the full protected area rather than forested pixels exclusively. A forest mask derived from a global forest cover product such as Hansen Global Forest Change would refine these statistics to forested pixels only in future iterations of this analysis.
+
+Spatial resolution of 20m means clearings smaller than approximately 400m² may not be reliably detected. The dNBR classification thresholds carry inherent uncertainty for pixels with values close to class boundaries. No field validation data was used in this analysis.
+
+This analysis focuses on forest disturbance detection and vegetation health monitoring via spectral indices and change detection. It does not include above-ground biomass estimation, carbon stock quantification or additionality calculations. The disturbance detection and temporal monitoring pipeline demonstrated here represents the remote sensing component that would underpin a broader carbon project MRV workflow, but does not constitute a carbon estimation methodology in itself.
+
+---
+
 ## Map Outputs
 
 ### Figure 1 - Forest Health Indices 2022-2026
@@ -148,17 +161,18 @@ The following scripts can be opened and run directly in the GEE Code Editor with
 
 ---
 
+## Running the Python Pipeline
+
 ### Requirements
 
+```
 earthengine-api
 geopandas
 numpy
 matplotlib
 rasterio
 Pillow
-
-## Running the Python Pipeline
-
+```
 
 ```bash
 pip install -r requirements.txt
@@ -171,6 +185,8 @@ earthengine authenticate
 ```
 
 Sign in with a Google account that has GEE access. Authentication is a one-time step per machine.
+
+Note: update the `project` parameter in `ee.Initialize()` to match your own GEE Cloud project before running.
 
 ### Running the pipeline
 
@@ -208,26 +224,3 @@ Figures are saved to `outputs/figures/`.
 | Sentinel-2 L2A imagery | GEE public archive: `COPERNICUS/S2_SR_HARMONIZED` |
 | Study area boundary | WDPA via [protectedplanet.net](https://www.protectedplanet.net) (WDPA ID: 555703480) |
 | Reference context | Global Forest Watch, Hansen Global Forest Change |
-
----
-
-## Repository Structure
-PreyLangCambodia/
-raw_data/                    - WDPA boundary shapefile
-scripts/
-pipeline.py                - GEE Python API pipeline
-map_outputs.py             - Matplotlib figure production
-gee_js/                    - GEE Code Editor JavaScript scripts
-outputs/
-geotiffs/                  - GeoTIFFs exported from GEE
-figures/                   - Final map outputs
-requirements.txt
-README.md
-
-
----
-
-## Author
-
-Sam Williamson
-[github.com/samw0907](https://github.com/samw0907)
