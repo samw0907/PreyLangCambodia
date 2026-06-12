@@ -1,6 +1,3 @@
-
-
-Install dependencies:# Prey Lang Wildlife Sanctuary - Forest Health & Disturbance Monitoring
 ## Multi-Index Sentinel-2 Analysis via Google Earth Engine | Cambodia | 2022-2026
 
 ---
