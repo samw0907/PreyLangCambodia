@@ -5,7 +5,7 @@
 
 ## Project Overview
 
-This project builds and executes a full end-to-end forest health monitoring pipeline over Prey Lang Wildlife Sanctuary in central Cambodia, using multi-temporal Sentinel-2 imagery processed via Google Earth Engine (GEE). The analysis covers three dry season composites spanning 2022, 2024 and 2026, detecting forest disturbance and partial recovery patterns across one of Southeast Asia's largest remaining lowland evergreen forest blocks.
+This project builds and executes a full end-to-end forest health monitoring pipeline over Prey Lang Wildlife Sanctuary in central Cambodia, using multi-temporal Sentinel-2 imagery processed via Google Earth Engine (GEE). The analysis covers three dry season composites spanning 2022, 2024 and 2026, detecting forest disturbance and partial recovery patterns across one of Southeast Asia's most ecologically significant lowland evergreen forest blocks.
 
 The project demonstrates multi-index spectral analysis and change detection workflows applied to a tropical forest monitoring context. Prey Lang is subject to documented illegal logging pressure, making it a relevant and challenging study area for forest disturbance detection and vegetation health assessment over time.
 
